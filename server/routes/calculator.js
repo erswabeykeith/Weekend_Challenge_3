@@ -14,6 +14,11 @@ router.post('/', function(req, res){ //Step 5) Numbers data gets here and the fu
  res.sendStatus(201);
 });
 
+router.get('/', function(req, res){
+  var answer = calculate(obj.firstNumber, obj.secondNumber, obj.operator);
+  res.send(answer);
+});
+
 // calulate(2, 4, "add");
 // console.log(calulate(2, 4, "add"));
 

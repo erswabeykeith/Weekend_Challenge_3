@@ -25,5 +25,16 @@ fields.forEach(function(element, index, array) {
    }
  });
 
+ $.ajax({
+   type: 'GET',
+   url: '/calculator',
+   success: function(data){
+     console.log("success");
+     $("#answer").text(data);
+   },
+   error: function(error){
+     console.log('The "/calculator" ajax post request failed with error: ', error);
+   }
+});
 });
 });

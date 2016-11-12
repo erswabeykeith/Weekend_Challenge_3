@@ -16,7 +16,7 @@ fields.forEach(function(element, index, array) {
  $.ajax({                      //Step 1) Ajax requests to send information to /calculator on the backend
    type: 'POST',
    url: '/calculator',
-   data: numbers,              //Step 2) Object potato (defined above) is sent the app.js file
+   data: numbers,              //Step 2) Object numbers (defined above) is sent the app.js file
    success: function(){
      console.log("success");
    },

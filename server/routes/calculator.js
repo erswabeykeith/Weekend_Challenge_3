@@ -2,6 +2,7 @@ var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
 var router = express.Router();
+var answer = {};
 var obj = {};
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,7 +16,7 @@ router.post('/', function(req, res){ //Step 5) Numbers data gets here and the fu
 });
 
 router.get('/', function(req, res){
-  var answer = calculate(obj.firstNumber, obj.secondNumber, obj.operator);
+  answer.value = calculate(obj.firstNumber, obj.secondNumber, obj.operator);
   res.send(answer);
 });
 

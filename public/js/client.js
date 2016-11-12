@@ -1,7 +1,7 @@
 $(document).ready(function(){
 //  console.log("test");
 
-$('button').on('click', function(event){
+$('.operator').on('click', function(event){
 event.preventDefault();
 var numbers = {};
 var fields = $('#calculator').serializeArray();  //Turns into an object
@@ -30,11 +30,18 @@ fields.forEach(function(element, index, array) {
    url: '/calculator',
    success: function(data){
      console.log("success");
-     $("#answer").text(data);
+  appendAnswer(data.value);
    },
    error: function(error){
      console.log('The "/calculator" ajax post request failed with error: ', error);
    }
 });
 });
+$("#clear").on('click', function(event) {
+document.getElementById("calculator").reset();
 });
+});
+
+function appendAnswer(data){
+$("#answer").text(data);
+}

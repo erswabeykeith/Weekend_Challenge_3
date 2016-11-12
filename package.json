@@ -1,7 +1,6 @@
 {
   "name": "weekend_challenge_3",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -14,5 +13,14 @@
     "start": "node server/app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erswabeykeith/Weekend_Challenge_3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/erswabeykeith/Weekend_Challenge_3/issues"
+  },
+  "homepage": "https://github.com/erswabeykeith/Weekend_Challenge_3#readme",
+  "description": ""
 }

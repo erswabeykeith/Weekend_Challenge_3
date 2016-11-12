@@ -1,33 +1,21 @@
-var express = require('express');
+var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
-
-// routing modules
-// var cats = require('./routes/cats');
 var index = require('./routes/index');
+var calculator = require('./routes/calculator'); //Step 4) The potato data follows this route to calculator.js
 
-// use body parser on EVERY request
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-// // Routes
-// app.use('/cats', cats);
-//
-// // Routes
-// app.use('/cats', cats);
-//
-// // Routes
-// app.use('/cats', cats);
-//
-// // Routes
-// app.use('/cats', cats);
 
-// Static Files
+
+app.use('/calculator', calculator); //Step 3) Ajax request looks for /calculator (var calculator) and finds it here
+
 app.use('/', index);
 
-// Set port to listen on
+
 app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'), function() {
-  console.log('server is listening on port ' + app.get('port'));
+ console.log('server is listening on port ' + app.get('port'));
 });
